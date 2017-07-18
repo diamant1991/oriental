@@ -1404,9 +1404,13 @@ img {
   background: url(../img/bg.jpg) no-repeat 50%;
   background-size: cover;
   padding-top: 70px;
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  overflow: hidden;
+  position: relative; }
   .advantages__list {
-    margin-left: -10px; }
+    margin-left: -10px;
+    position: relative;
+    z-index: 2; }
   .advantages__block {
     padding-left: 10px; }
   .advantages__item {
@@ -1478,13 +1482,17 @@ img {
   background: url(../img/bg.jpg) no-repeat 50%;
   background-size: cover;
   padding-top: 85px;
-  padding-bottom: 105px; }
+  padding-bottom: 105px;
+  position: relative;
+  overflow: hidden; }
   .delivery__bottom-text {
     font-size: 22px;
     font-family: "MinionProMediumItalic";
     color: #5da429; }
   .delivery__content {
-    margin-left: -25px; }
+    margin-left: -25px;
+    position: relative;
+    z-index: 2; }
   .delivery__price {
     font-size: 22px;
     color: #5da429;
