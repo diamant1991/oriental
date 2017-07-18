@@ -1,0 +1,1 @@
+$(".dropdown-btn").click(function(e){e.preventDefault();var i=$(this).next();i.is(":hidden")?($(this).addClass("active"),i.slideDown(250)):($(this).removeClass("active"),i.slideUp(250))});
