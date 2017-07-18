@@ -1055,6 +1055,8 @@ h3 {
     width: 21px;
     height: 21px;
     background: url(../img/basket-icon.png) no-repeat; }
+    .basket__icon_white {
+      background: url(../img/basket-icon-white.png) no-repeat; }
   .basket__name {
     margin-left: 15px; }
   .basket__count {
@@ -1163,6 +1165,8 @@ img {
       text-transform: uppercase;
       color: #000;
       font-family: "P22UndergroundCYProMedium"; }
+      .catalog__filter__item:hover, .catalog__filter__item.active {
+        color: #5da429; }
 
 .product-sale {
   padding: 40px;
@@ -1186,7 +1190,8 @@ img {
 .product-img {
   position: relative;
   height: 255px;
-  margin-bottom: 25px; }
+  margin-bottom: 25px;
+  text-align: center; }
 
 .product-name {
   text-align: center;
@@ -1265,6 +1270,8 @@ img {
   margin-bottom: 40px; }
   .block-title_adv {
     margin-bottom: 60px; }
+  .block-title_delivery {
+    margin-bottom: 80px; }
   .block-title_left {
     text-align: left; }
   .block-title_white {
@@ -1282,20 +1289,6 @@ img {
   color: #000; }
   .select_large {
     font-size: 21px; }
-  .select-btn {
-    width: 30px;
-    height: 100%;
-    position: absolute;
-    z-index: 2;
-    right: 0;
-    top: 0;
-    cursor: pointer;
-    -webkit-border-radius: 5px 0 0 5px;
-    border-radius: 5px 0 0 5px;
-    border-left: 1px solid #d6d6d6;
-    background: url(../img/select-arrow.png) no-repeat 50%; }
-    .select-btn_large {
-      width: 40px; }
 
 .slct {
   display: block;
@@ -1313,21 +1306,43 @@ img {
   white-space: nowrap;
   text-overflow: ellipsis;
   -o-text-overflow: ellipsis; }
+  .slct:after {
+    content: "";
+    cursor: pointer;
+    width: 30px;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    -webkit-border-radius: 5px 0 0 5px;
+    border-radius: 5px 0 0 5px;
+    border-left: 1px solid #d6d6d6;
+    background: url(../img/select-arrow.png) no-repeat 50%; }
   .slct_large {
     width: 120px;
     font-size: 18px;
     font-size: 21px; }
+    .slct_large:after {
+      width: 40px; }
 
 .drop {
   margin: 0;
   padding: 0;
   width: 100%;
-  border: 1px solid #cecece;
+  border: 1px solid #d6d6d6;
   border-top: none;
   display: none;
   position: absolute;
   z-index: 5;
-  background: #fff; }
+  background: #fff;
+  font-size: 14px; }
+  .drop li {
+    cursor: pointer;
+    padding: 5px 10px; }
+    .drop li:hover {
+      background: #d6d6d6; }
 
 .product-view {
   padding: 40px; }
@@ -1443,8 +1458,13 @@ img {
   background-size: cover; }
   .certificates__text {
     max-width: 555px;
+    height: 315px;
     text-align: left;
     margin-left: 90px; }
+  .certificates__icon {
+    position: relative;
+    z-index: 2;
+    top: -30px; }
   .certificates__content {
     text-align: center; }
   .certificates__prices__item {
@@ -1453,3 +1473,81 @@ img {
     .certificates__prices__item span {
       font-family: "arabic";
       font-size: 50px; }
+
+.delivery {
+  background: url(../img/bg.jpg) no-repeat 50%;
+  background-size: cover;
+  padding-top: 85px;
+  padding-bottom: 105px; }
+  .delivery__bottom-text {
+    font-size: 22px;
+    font-family: "MinionProMediumItalic";
+    color: #5da429; }
+  .delivery__content {
+    margin-left: -25px; }
+  .delivery__price {
+    font-size: 22px;
+    color: #5da429;
+    font-family: "P22UndergroundCYProBook"; }
+  .delivery__status {
+    font-family: "MinionProMediumItalic";
+    font-size: 22px;
+    margin-bottom: 20px; }
+  .delivery__block {
+    padding-left: 25px; }
+  .delivery__item {
+    height: 509px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: url(../img/delivery-bg.png) no-repeat;
+    text-align: center;
+    color: #000; }
+    .delivery__item__text {
+      font-size: 16px;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 300;
+      margin-bottom: 35px; }
+    .delivery__item__title {
+      text-transform: uppercase;
+      font-family: "P22UndergroundCYProMedium";
+      height: 130px;
+      font-size: 20px;
+      padding-top: 55px; }
+    .delivery__item__info {
+      background: #fff;
+      height: 360px;
+      padding: 30px;
+      line-height: 1.4; }
+
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px 15px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; }
+  .btn-green {
+    color: #fff;
+    font-size: 18px;
+    font-family: "P22UndergroundCYProBook";
+    background: #5da429; }
+    .btn-green:hover {
+      background: #467b1f; }
+
+.footer {
+  background: url(../img/footer.jpg) no-repeat 50%;
+  background-size: cover;
+  color: #fff; }
+  .footer-logo {
+    height: 175px; }
+  .footer .basket {
+    color: #fff; }
+  .footer .header__telephone {
+    color: #fff; }
+  .footer .header__title a {
+    color: #c5e434;
+    text-decoration: none; }
+  .footer .call-btn {
+    color: #fff;
+    border-color: #c5e434; }
+    .footer .call-btn:hover {
+      background: #c5e434; }
