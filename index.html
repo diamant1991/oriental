@@ -50,7 +50,7 @@
                   <div class="header__telephone">
                     +7 (977) 456 4 456
                   </div>
-                  <a href="#" class="call-btn">
+                  <a href="#callback" class="call-btn fancybox">
                     Мы перезвоним вам
                   </a>
                 </div>
@@ -873,7 +873,9 @@
         <div class="row">
           <div class="certificates__content">
             <div class="certificates__icon top">
-              <img src="img/cert.png" alt="">
+              <a href="#certificatesPopup" class="fancybox">
+                <img src="img/cert.png" alt="">
+              </a>
             </div>
             <div class="certificates__text top">
               <div class="table-block">
@@ -954,61 +956,323 @@
         </div>
       </div>
     </div>
-
+    <footer class="footer">
+    	<div class="container">
+    		<div class="row">
+    			<div class="header__wrapp flex">
+    				<div class="footer-logo visible-xs">
+              <div class="table-block">
+              	<div class="block-vertical">
+              		<a href="#">
+              		  <img src="img/footer-logo.png" alt="">
+              		</a>
+              	</div>
+              </div>
+            </div>
+            <div class="header__profile">
+              <div class="table-block">
+                <div class="block-vertical">
+                  <div class="basket">
+                    <span class="basket__icon basket__icon_white middle"></span>
+                    <span class="basket__name middle hidden-xs">В корзине</span>
+                    <span class="middle basket__count">2</span>
+                    <span class="middle basket__price">12 566 руб.</span>
+                  </div>
+                  <div class="header__title hidden-xs">
+                    <a href="#">фруктово-овощные коробки</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer-logo hidden-xs">
+              <div class="table-block">
+              	<div class="block-vertical">
+              		<a href="#">
+              		  <img src="img/footer-logo.png" alt="">
+              		</a>
+              	</div>
+              </div>
+            </div>
+            <div class="header__contacts hidden-xs">
+              <div class="table-block">
+                <div class="block-vertical">
+                  <div class="header__telephone">
+                    +7 (977) 456 4 456
+                  </div>
+                  <a href="#callback" class="fancybox call-btn">
+                    Мы перезвоним вам
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+    		</div>
+    	</div>
+    </footer>
+    <div class="order-panel">
+      <div class="order-panel__box">
+          <div class="order-panel__cart">
+          <div class="order-panel__cart-ratio"></div>
+          <div class="order-panel__cart-total">
+            <span>2</span>
+          </div>
+          </div>
+          <div class="order-panel__cost">
+            <ul>
+              <li>В вашем заказе<strong>2</strong> <span class="productsWord">продукта</span>, сумма заказа <strong>370</strong> <strong>P</strong></li>
+              <li>Стоимость доставки <strong>500 Р</strong>, бесплатная доставка от <strong>2500 Р</strong>.
+              </li>
+            </ul>
+          </div>
+          <div class="order-panel__button">
+            <a href="#" class="btn link-popup btn--lg order-modal-btn">оформить заказ</a>
+          </div>
+      </div>
+    </div>
   </div>
-  <footer class="footer">
-  	<div class="container">
-  		<div class="row">
-  			<div class="header__wrapp flex">
-  				<div class="footer-logo visible-xs">
-            <div class="table-block">
-            	<div class="block-vertical">
-            		<a href="#">
-            		  <img src="img/footer-logo.png" alt="">
-            		</a>
-            	</div>
-            </div>
+  
+  <div id="callback" class="modal-item">
+    <div class="callback-popup">
+      <div class="h2">Обратный звонок</div>
+      <form action="#">
+          <input type="hidden" name="subject" value="Форма обратного вызова">
+          <label>
+              <input type="text" placeholder="Имя">
+          </label>
+          <label>
+            <input type="text" class="input-tel" placeholder="Телефон">
+          </label>
+          <div class="ta-center"> 
+          <input type="submit" class="btn-orange" value="Отправить">
           </div>
-          <div class="header__profile">
-            <div class="table-block">
-              <div class="block-vertical">
-                <div class="basket">
-                  <span class="basket__icon basket__icon_white middle"></span>
-                  <span class="basket__name middle hidden-xs">В корзине</span>
-                  <span class="middle basket__count">2</span>
-                  <span class="middle basket__price">12 566 руб.</span>
-                </div>
-                <div class="header__title hidden-xs">
-                  <a href="#">фруктово-овощные коробки</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="footer-logo hidden-xs">
-            <div class="table-block">
-            	<div class="block-vertical">
-            		<a href="#">
-            		  <img src="img/footer-logo.png" alt="">
-            		</a>
-            	</div>
-            </div>
-          </div>
-          <div class="header__contacts hidden-xs">
-            <div class="table-block">
-              <div class="block-vertical">
-                <div class="header__telephone">
-                  +7 (977) 456 4 456
-                </div>
-                <a href="#" class="call-btn">
-                  Мы перезвоним вам
-                </a>
-              </div>
-            </div>
-          </div>
+      </form>
+    </div>
+  </div>
+
+
+  <div class="modal" id="order-modal">
+    <div class="modal-content">
+      <div class="modal_history mfp-fade">
+        <button class="modal_close"></button>
+        <h3 class="modal_title section-title">Оформление заказа</h3>
+        <div class="step-level">
+            <ul>
+                <li>
+                    <span class="step-level__item step-level__item--first step-level__item--active">1</span>
+                    <span class="step-level__text step-level__text--first text step-level__text--active">Заказ</span>
+                </li>
+                <li>
+                    <span class="step-level__item step-level__item--second step-level__item--gray">2</span>
+                    <span class="step-level__text step-level__text--second step-level__text--gray">Оформление</span>
+                </li>
+            </ul>
         </div>
-  		</div>
-  	</div>
-  </footer>
+        <div class="modal__heading">
+            <p>
+                Закажите продуктов на <strong>2500 Р</strong> и мы доставим заказ бесплатно!
+            </p>
+        </div>
+        <div class="modal_content">
+            <div class="modal_table">
+                <div class="modal_detailes" id="step1">
+                    <div class="modal_row modal_row--title">
+                        <div class="modal_desc">
+                        </div>
+                        <div class="modal_title-total">
+                            <span>количество</span>
+                        </div>
+                        <div class="modal_title-price">
+                            <span>цена</span>
+                        </div>
+                    </div>
+                    <div class="modal_row product-directive">
+                        <div class="modal_desc">
+                            <figure class="modal_picture">
+                                <img alt="" src="http://via.placeholder.com/350x150">
+                            </figure>
+                            <div class="modal_product-title">
+                                <h4>Помидоры Бычье сердце</h4>
+                                <span class="modal_tth">340 р. / 1 кг </span>
+                            </div>
+                        </div>
+                        <div class="modal_weight">
+                            <div class="number">
+                                <span class="minus noselect">-</span>
+                                <span><span class="prodCount">1</span>кг</span>
+                                <span class="plus noselect">+</span>
+                                <div class="number__text">
+                                    <span>Удалить из корзины</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal_price">
+                          <span>340 P</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal_detailes hidden" id="step2">
+                    <form class="form form-order-step orderData" action="" method="post">
+                        <div class="form_group">
+                            <div class="field_label">
+                                <label for="name">Ваше имя*</label>
+                            </div>
+                            <div class="field_input">
+                                <input id="name" class="field" name="cart[name]" type="text" required=""><span class="field_invalid-point"></span>
+                            </div>
+                        </div>
+                        <div class="form_group">
+                            <div class="field_label">
+                                <label for="phone-number">Номер телефона*</label>
+                            </div>
+                            <div class="field_input">
+                                <input id="phone-number" class="field input-tel" name="cart[phone]" type="text" required=""><span class="field_invalid-point"></span>
+                            </div>
+                        </div>
+                        <div class="form_group">
+                            <label for="email">E-mail</label>
+                            <input id="email" class="field" name="cart[email]" type="text"><span></span>
+                        </div>
+                        <div class="form_group form_group--address">
+                            <div class="field_label">
+                                <label for="street">Адрес доставки*</label>
+                            </div>
+                            <div class="field_input">
+                                <input type="text" class="street field" name="cart[street]" id="street"><span class="field_reset-point"></span>
+                                <div class="suggestions">
+                                    <div class="suggestions_wrapper hidden"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_group form_group--address">
+                            <div class="form_home-row">
+                                <div class="form_group">
+                                    <input id="house" type="text" value="" class="field field_house house" name="cart[house]" placeholder="Дом"><span class="field_invalid-point"></span>
+                                </div>
+                                <div class="form_group">
+                                    <input id="corpuse" type="text" value="" class="building field field_corpuse building" name="cart[building]" placeholder="Корп.">
+                                </div>
+                                <div class="form_group">
+                                    <input id="flat" type="text" value="" class="field field_flat flat" name="cart[flat]" placeholder="Кв/Оф">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_group">
+                            <label for="password">Тип упаковки</label>
+                            <select class="form-select" name="" id="">
+                              <option value="">Значение 1</option>
+                              <option value="">Значение 2</option>
+                              <option value="">Значение 3</option>
+                            </select>
+                        </div>
+                        <div class="form_group">
+                            <label for="password">Способы оплаты</label>
+                            <select class="form-select" name="" id="">
+                              <option value="">Значение 1</option>
+                              <option value="">Значение 2</option>
+                              <option value="">Значение 3</option>
+                            </select>
+                        </div>
+                        <div class="form_group">
+                            <label for="password">Комментарий</label>
+                            <textarea name="cart[comment]" id="" class="field field_message"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal_total">
+                    <div class="modal_kassa">
+                        <div class="modal_kassa--inner"></div>
+                    </div>
+                    <div class="modal_check">
+                        <div class="modal_check-total">
+                            <ul>
+                                <li>
+                                  <span class="modal_check-order">
+                                      <span class="modal_check-title">Сумма заказа</span>
+                                      <span class="modal_check-price orderPrice">370 Р</span>
+                                  </span>
+                                </li>
+                                <li>
+                                  <span class="modal_check-order">
+                                      <span class="modal_check-title">Доставка</span>
+                                      <span class="modal_check-price">500 Р</span>
+                                  </span>
+                                </li>
+                                <li class="ng-hide">
+                                  <span class="modal_check-order">
+                                      <span class="modal_check-title">Бонусы</span>
+                                      <span class="modal_check-price">- Р</span>
+                                  </span>
+                                </li>
+                            </ul>
+                            <div class="modal_check-order--total">
+                                <span class="modal_check-order-title">Итого</span>
+                                <span class="modal_check-order-price">870 Р</span>
+                            </div>
+                            <form action="" class="modal_check-order_form">
+                                <span></span>
+                                <a href="#" class="btn link-popup btn--lg step-btn">оформить заказ</a>
+                            </form>
+                            <div class="modal_check-order_end">
+                                <p>
+                                    Итоговая сумма может немного измениться в результате взвешивания.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="total_mobile">
+                <div class="modal_check-total">
+                    <ul>
+                        <li>
+                        <span class="modal_check-order">
+                            <span class="modal_check-title">Сумма заказа</span>
+                            <span class="modal_check-price orderPrice ng-binding">370 Р</span>
+                        </span>
+                        </li>
+                        <li>
+                        <span class="modal_check-order">
+                            <span class="modal_check-title">Доставка</span>
+                            <span class="modal_check-price">500 Р</span>
+                        </span>
+                        </li>
+                    </ul>
+                    <div class="modal_check-order--total">
+                        <span class="modal_check-order-title">Итого</span>
+                        <span class="modal_check-order-price">870 Р</span>
+                    </div>
+                    <form action="" class="modal_check-order_form">
+                        <span></span>
+                        <a href="#" class="btn link-popup btn--lg step-btn">оформить заказ</a>
+                    </form>
+                    <div class="modal_check-order_end">
+                        <p>
+                            Итоговая сумма может немного измениться в результате взвешивания.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="certificatesPopup" class="certificates-modal" class="clearfix" style="display: none">
+    <h2>Выберите подарочный сетртификат</h2>
+      <div class="certificates__list clearfix">
+          <div class="col">
+              <div class="certificates__item"><img src="img/certificate1.png" alt=""><span>3000 <br> руб.</span></div><a href="javascript:void(0);" class="btn btn--orange addcert" data-id="certificate3000">Оформить заказ</a>
+          </div>
+          <div class="col">
+              <div class="certificates__item"><img src="img/certificate2.png" alt=""><span>5000 <br> руб.</span></div><a href="javascript:void(0);" class="btn btn--orange addcert" data-id="certificate5000">Оформить заказ</a>
+          </div>
+          <div class="col">
+              <div class="certificates__item"><img src="img/certificate3.png" alt=""><span>10000 <br> руб.</span></div><a href="javascript:void(0);" class="btn btn--orange addcert" data-id="certificate10000">Оформить заказ</a>
+          </div>
+      </div>
+  </div>
+
+
 
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
